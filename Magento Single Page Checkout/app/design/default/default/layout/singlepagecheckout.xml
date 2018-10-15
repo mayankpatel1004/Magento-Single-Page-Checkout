@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+		
+    </default>
+	<checkout_cart_index translate="label">
+		 <block type="core/text_list" name="checkout.cart.top_methods" as="top_methods" translate="label">
+			<label>Payment Methods Before Checkout Button</label>
+			<block type="checkout/onepage_link" name="checkout.cart.methods.onepage" template="singlepagecheckout/singlepagecheckout/link.phtml"/>
+         </block>
+	</checkout_cart_index>
+    <singlepagecheckout_index_index translate="label">
+		<label>Single Page Checkout</label>
+        <!-- Mage_Checkout -->
+        <remove name="left"/>
+		<remove name="right"/>
+		<reference name="head">
+			<action method="addCss"><stylesheet>css/singlepagecheckout.css</stylesheet></action>
+			<action method="addItem"><type>skin_js</type><name>js/singlepagecheckout.js</name></action>			
+		</reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>		
+		
+        <reference name="content">
+            	<block type="singlepagecheckout/singlepagecheckout" name="singlepagecheckout" template="singlepagecheckout/singlepagecheckout.phtml">				
+						<block type="singlepagecheckout/singlepagecheckout_login" name="singlepagecheckout.singlepagecheckout.login" as="login" template="singlepagecheckout/singlepagecheckout/login.phtml">
+							<block type="page/html_wrapper" name="singlepagecheckout.singlepagecheckout.login.before" as="login_before">
+								<action method="setMayBeInvisible"><value>1</value></action>
+							</block>
+						</block>
+						<block type="singlepagecheckout/singlepagecheckout_billing" name="singlepagecheckout.singlepagecheckout.billing" as="billing" template="singlepagecheckout/singlepagecheckout/billing.phtml"/>
+						<block type="singlepagecheckout/singlepagecheckout_shipping" name="singlepagecheckout.singlepagecheckout.shipping" as="shipping" template="singlepagecheckout/singlepagecheckout/shipping.phtml"/>
+						<block type="singlepagecheckout/singlepagecheckout_shipping_method" name="singlepagecheckout.singlepagecheckout.shipping_method" as="shipping_method" template="singlepagecheckout/singlepagecheckout/shipping_method.phtml">
+							<block type="singlepagecheckout/singlepagecheckout_shipping_method_available" name="singlepagecheckout.singlepagecheckout.shipping_method.available" as="available" template="singlepagecheckout/singlepagecheckout/shipping_method/available.phtml"/>
+							<block type="singlepagecheckout/singlepagecheckout_shipping_method_additional" name="singlepagecheckout.singlepagecheckout.shipping_method.additional" as="additional" template="singlepagecheckout/singlepagecheckout/shipping_method/additional.phtml"/>
+						</block>
+						<block type="singlepagecheckout/singlepagecheckout_payment" name="singlepagecheckout.singlepagecheckout.payment" as="payment" template="singlepagecheckout/singlepagecheckout/payment.phtml">
+							<block type="singlepagecheckout/singlepagecheckout_payment_methods" name="singlepagecheckout.payment.methods" as="methods" template="singlepagecheckout/singlepagecheckout/payment/methods.phtml">
+								<action method="setMethodFormTemplate"><method>purchaseorder</method><template>payment/form/purchaseorder.phtml</template></action>
+							</block>
+						</block>
+						<block type="singlepagecheckout/singlepagecheckout_review" name="singlepagecheckout.singlepagecheckout.review" as="review" template="singlepagecheckout/singlepagecheckout/review.phtml">
+							<block type="singlepagecheckout/agreements" name="singlepagecheckout.singlepagecheckout.agreements" as="agreements" template="singlepagecheckout/singlepagecheckout/agreements.phtml"/>
+							<block type="singlepagecheckout/singlepagecheckout" name="singlepagecheckout.review.ordercomments" as="ordercomments" template="singlepagecheckout/singlepagecheckout/review/ordercomments.phtml"/>
+							<block type="singlepagecheckout/singlepagecheckout_review_info" name="singlepagecheckout.review.info" as="info" template="singlepagecheckout/singlepagecheckout/review/info.phtml">
+								<action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<block type="checkout/cart_totals" name="singlepagecheckout.singlepagecheckout.review.info.totals" as="totals" template="singlepagecheckout/singlepagecheckout/review/totals.phtml"/>
+								<block type="core/text_list" name="singlepagecheckout.singlepagecheckout.review.info.items.before" as="items_before"/>
+        					</block>
+						</block>
+					</block>
+        </reference>
+    </singlepagecheckout_index_index>
+
+<!--
+One page singlepagecheckout shipping methods block
+-->
+
+    <singlepagecheckout_index_shippingmethod>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+
+        <block type="singlepagecheckout/singlepagecheckout_shipping_method_available" name="root" output="toHtml" template="singlepagecheckout/singlepagecheckout/shipping_method/available.phtml"/>
+    </singlepagecheckout_index_shippingmethod>
+    
+<!--
+One page singlepagecheckout order review block
+-->
+
+    <singlepagecheckout_index_review>
+        <!-- Mage_Checkout -->
+        <remove name="right"/>
+        <remove name="left"/>
+		<reference name="root">
+			<action method="setTemplate"><template>page/singlepagecheckout.phtml</template></action>
+		</reference>
+		<reference name="content">
+							<block type="singlepagecheckout/singlepagecheckout_review_info" name="singlepagecheckout.review.info" as="info" template="singlepagecheckout/singlepagecheckout/review/info.phtml">
+								<action method="addItemRender"><type>default</type><block>checkout/cart_item_renderer</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<action method="addItemRender"><type>grouped</type><block>checkout/cart_item_renderer_grouped</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<action method="addItemRender"><type>configurable</type><block>checkout/cart_item_renderer_configurable</block><template>singlepagecheckout/singlepagecheckout/review/item.phtml</template></action>
+								<block type="checkout/cart_totals" name="singlepagecheckout.singlepagecheckout.review.info.totals" as="totals" template="singlepagecheckout/singlepagecheckout/review/totals.phtml"/>
+								<block type="core/text_list" name="singlepagecheckout.singlepagecheckout.review.info.items.before" as="items_before"/>
+        					</block>
+		</reference>
+    </singlepagecheckout_index_review>
+</layout> 

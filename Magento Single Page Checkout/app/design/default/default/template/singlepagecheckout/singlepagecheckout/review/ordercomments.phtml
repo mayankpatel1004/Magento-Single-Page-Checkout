@@ -1,0 +1,13 @@
+<?php
+if($this->canShowOrderComments())
+{
+?>
+<div class="order-comments">
+	<label for="taOrderComments"><?php echo $this->__('Order Comments'); ?></label>
+	<div>
+		<textarea name="taOrderComments" id="taOrderComments" style="height:100px; width:300px;"></textarea>
+	</div>
+</div>
+<?php
+}
+?>

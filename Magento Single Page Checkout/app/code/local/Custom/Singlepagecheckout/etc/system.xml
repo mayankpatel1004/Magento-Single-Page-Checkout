@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<config>    
+	<sections>
+		<checkout>
+			<groups>				
+				<singlepagecheckout translate="label comment">
+					<label>Single Page Checkout</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>0</show_in_store>
+					
+					<fields>												
+						<default_country translate="label">
+							<label>Default country</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_country</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</default_country>
+						
+						<!--<default_shipping_method translate="label">
+							<label>Default shipping method</label>
+							<frontend_type>select</frontend_type>
+							<source_model>singlepagecheckout/source_shippingmethods</source_model>						
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</default_shipping_method>					
+						
+						
+						<default_payment_method translate="label">
+							<label>Default payment method</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_payment_allowedmethods</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</default_payment_method>-->
+						
+						<exclude_city translate="label">
+							<label>Exclude City field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_city>		
+						
+						<exclude_telephone translate="label">
+							<label>Exclude Telephone field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_telephone>
+						
+						<exclude_company translate="label">
+							<label>Exclude Company field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>8</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_company>
+						
+						<exclude_fax translate="label">
+							<label>Exclude Fax field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>9</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_fax>
+						
+						<exclude_region translate="label">
+							<label>Exclude Region field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_region>
+						
+						<exclude_zip translate="label">
+							<label>Exclude Zip/Postcode field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</exclude_zip>
+						
+						
+						<enable_comments translate="label">
+							<label>Enable comments field</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>12</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable_comments>
+						
+						<enable_different_shipping translate="label">
+							<label>Enable different shipping address</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>13</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable_different_shipping>																	
+						
+						
+						<enable_terms translate="label">
+							<label>Show terms checkbox</label>
+							<comment>If set it to Yes, you need to add terms and condition at Sales -> Terms &amp; Condition and Enable "Terms &amp; Condition" at System -> Configuration -> Checkout -> Checkout Options</comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>17</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable_terms>
+						
+						<!--<terms_title translate="label">
+							<label>Terms and conditions title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>18</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</terms_title>
+						
+						<terms_contents translate="label">
+							<label>Terms and conditions contents (HTML)</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>19</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</terms_contents>		-->				
+						
+						<checkout_title translate="label">
+							<label>Checkout title</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</checkout_title>
+						
+						<checkout_description translate="label">
+							<label>Checkout description</label>
+							<frontend_type>textarea</frontend_type>
+							<sort_order>21</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</checkout_description>
+						
+						<enable_gift_messages translate="label">
+							<label>Enable gift messages</label>
+							<frontend_type>select</frontend_type>
+							<comment>If set it to Yes, Set Gift Message you want to be per order / per item from "System->Configuration->Sales->Gift Messages"</comment>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>25</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</enable_gift_messages>
+						
+					</fields>
+				</singlepagecheckout>				
+			</groups>
+		</checkout>
+	</sections>
+</config>

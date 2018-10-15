@@ -1,0 +1,115 @@
+.singlepagecheckout .buttons-set { margin-top:0; padding-top:2em; }
+.singlepagecheckout .buttons-set p.required { margin:0; padding:0 10px 10px; }
+.singlepagecheckout .buttons-set .back-link small { display:none; }
+.singlepagecheckout .buttons-set .back-link a { background:url(../images/i_arrow-top.gif) 0 50% no-repeat; padding-left:16px; }
+.singlepagecheckout .buttons-set.disabled button.button { display:none; }
+.singlepagecheckout .buttons-set .please-wait { height:21px; line-height:21px; }
+.singlepagecheckout .ul { list-style:disc outside; padding-left:18px; }
+
+.singlepagecheckout { position:relative; }
+.singlepagecheckout li.section {}
+
+.singlepagecheckout .step-title { /*border:1px solid #BBAFA0;  background-color:#F9F3E3; padding:4px 8px 6px; text-align:right; height:15px;*/ }
+.singlepagecheckout .step-title .number { /*float:left; background:#f18200; border-color:#f19900; color:#fff; padding:0 4px; margin:0 5px 0 0; font:bold 11px/14px arial, helvetica, sans-serif;*/ }
+.singlepagecheckout .step-title h2 { /*float:left; margin:0; font:bold 13px/16px Arial, Helvetica, sans-serif; color:#F18200;*/ }
+.singlepagecheckout .step-title a { /*display:none; float:right; font-size:11px; line-height:16px;*/ }
+
+.singlepagecheckout .allow .step-title { /*background:#d0dce1; border:1px solid #a3aeb3; border-bottom:0; color:#a4b3b9; cursor:pointer; height:15px;*/ }
+.singlepagecheckout .allow .step-title .number { /*background:#dbe6eb; border-color:#dbe6eb; color:#a4b3b9; */}
+.singlepagecheckout .allow .step-title h2 { /*color:#a4b3b9; */}
+/*.singlepagecheckout .allow .step-title a { display:block; }*/
+
+.singlepagecheckout .active .step-title { /*background:#f9f3e3; border:1px solid #bbafa0; padding-bottom:5px; color:#f18200; cursor:default; height:15px;*/ }
+.singlepagecheckout .active .step-title .number { /*background:#f18200; border-color:#f19900; color:#fff;*/ }
+.singlepagecheckout .active .step-title h2 { /*color:#f18200;*/ }
+/*.singlepagecheckout .active .step-title a { display:none; }*/
+
+.singlepagecheckout .step { /*border:1px solid #bbafa0; border-top:0; background:#fbfaf6 url(../images/bkg_checkout.gif) 0 0 repeat-x;*/ padding:15px 10px; position:relative; }
+.singlepagecheckout .step .tool-tip { right:30px; }
+
+#opc-login .buttons-set { border-top:0; }
+#opc-login h3 { font-size:13px; border-bottom:1px solid #e4e4e4; padding-bottom:2px; text-transform:uppercase; }
+#opc-login h4 { font-size:1em; font-weight:bold; margin:0; color:#2f2f2f; }
+
+#opc-shipping_method .buttons-set { border-top:0; }
+
+.opc .gift-messages-form .inner-box { padding:5px; height:260px; overflow:auto; }
+
+#opc-review .step { border:0; padding:0; }
+#opc-review .product-name { font-weight:bold; color:#0a263c; }
+#opc-review .item-options { margin:5px 0 0; }
+#opc-review .buttons-set { padding:20px 30px; border:1px solid #d9dde3; border-width:0 1px 1px; }
+#opc-review .buttons-set p { margin:0; line-height:40px; }
+#opc-review .buttons-set .please-wait { height:40px; line-height:40px; }
+
+.osc-col1{
+width:49.5%;
+float:left;
+}
+.osc-col2{
+float:left;
+margin-left:15px;
+width:370px; 
+}
+#opc-shipping{
+margin-top:15px;
+}
+#opc-review, #opc-payment{
+margin-top:15px;
+}
+#billing-address-select, #shipping-address-select{
+width:480px;
+}
+#checkoutSteps fieldset, #checkoutSteps form, #checkoutSteps ul{
+width:90%;
+}
+
+#checkoutSteps li.wide input{
+width:423px;
+}
+.singlepagecheckout-agreements{
+padding-left:10px;
+padding-right:10px;
+padding-top:10px;
+}
+.singlepagecheckout-agreements a {
+margin-left:10px;
+}
+#checkout-review-submit{
+border-left:solid 1px #D9DDE3;
+border-right:solid 1px #D9DDE3;
+}
+.order-comments{
+margin-left:10px;
+}
+.order-comments label{
+font-weight:bold;
+margin-bottom:7px;
+}
+
+#checkoutSteps #allow-gift-message-container textarea{
+width:235px;
+}
+.checkout_description{
+padding:10px;
+}
+.singlepagecheckout .osc-col2{
+width:48.5%;
+}
+.singlepagecheckout .order-comments div{
+margin-top:7px;
+}
+.singlepagecheckout .gift-messages-form{
+background-color:#FAFAFA;
+border:solid 1px #CCC;
+margin:0 10px 0 0;
+padding:12px 5px 10px 25px;
+width:92%;
+}
+.singlepagecheckout .gift-messages-form .item .details .product-name{
+font-size:12px;
+font-family:Arial, Helvetica, sans-serif;
+}
+.singlepagecheckout #checkout-review-table thead tr.last{
+background-color:#6D6E70;
+}
